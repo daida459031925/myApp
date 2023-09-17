@@ -10,7 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: MyHomePage(),
-      theme: _buildShrineTheme(),
+      // theme: _buildShrineTheme(),
+      // 去掉项目右上角的debug
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -31,7 +33,9 @@ class MyHomePage extends StatelessWidget {
           Icon(Icons.more_vert),
         ],
       ),
-      body: Container(),
+      body: Container(
+        child: Text('asdasd'),
+      ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
           children: [
@@ -43,7 +47,9 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton:
-      FloatingActionButton(child: const Icon(Icons.add), onPressed: () {}),
+      FloatingActionButton(child: const Icon(Icons.add), onPressed: () {
+        print("object");
+      }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
