@@ -10,6 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: MyHomePage(),
+      theme: ThemeData(
+          useMaterial3: true
+      ),
       // theme: _buildShrineTheme(),
       // 去掉项目右上角的debug
       debugShowCheckedModeBanner: false,
