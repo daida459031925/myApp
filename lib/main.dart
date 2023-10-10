@@ -193,20 +193,13 @@ class Person {
 }
 
 void main() {
-  // 将类转换为JSON结构体
   Person person = Person(name: 'Fengfeng', age: 18, email: 'fengfeng@example.com');
-  Map<String, dynamic> personJson = JsonUtils.toMap(person);
-  print(personJson);
+  //json转换成字符串
+  print(JsonUtils.encodeToJson(person));
 
-  // 将类转换为JSON字符串
+  // 字符串转换成json
   String personJsonStr = JsonUtils.encodeToJson(person);
-  print(personJsonStr);
+  var decodeFromJson = JsonUtils.decodeFromJson<Person>(personJsonStr);
+  print(decodeFromJson.age);
 
-  // 将JSON结构体转换为类
-  Person decodedPerson = JsonUtils.fromMap<Person>(personJson);
-  print(decodedPerson.name);
-
-  // 将JSON字符串转换为类
-  Person decodedPerson2 = JsonUtils.decodeFromJson<Person>(personJsonStr);
-  print(decodedPerson2.name);
 }
