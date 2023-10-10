@@ -20,10 +20,12 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    WebPreferences webPreferences = WebPreferences(javascript: true); // 添加这一行
     webViewController.init(
       context: context,
       setState: setState,
-      uri: Uri.parse("https://www.wechat.com/en"),
+      uri: Uri.parse("http://192.168.2.100/labms"),
+      webPreferences: webPreferences, // 将webPreferences传递给WebViewController
     );
   }
 
