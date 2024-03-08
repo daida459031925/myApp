@@ -48,7 +48,7 @@ dependencies:
 
   #-------------------------------------串口调用------------------------------------------#
   #串口调用 支持平台Linux macOS Windows Android
-  flutter_libserialport: ^0.3.0
+  flutter_libserialport: ^0.4.0
 
 
 dev_dependencies:
